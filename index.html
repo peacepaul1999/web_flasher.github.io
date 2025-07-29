@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ESP32 Web Flasher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <h2>ESP Firmware Flasher</h2>
+  <button id="connect">🔌 Connect</button>
+  <p id="chip-info">Not connected</p>
+
+  <br/><br/>
+
+  <input type="file" id="firmware" accept=".bin" />
+  <br/><br/>
+  <button id="flash">⚡ Flash Firmware</button>
+  </div>
+
+  <script type="module" src="flasher.js"></script>
+</body>
+</html>
