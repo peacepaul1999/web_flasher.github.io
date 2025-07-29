@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 Web Flasher</title>
+  <title>ESP Multi-Part Flasher</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-  <h2>ESP Firmware Flasher</h2>
-  <button id="connect">🔌 Connect</button>
+  <h2>ESP Firmware Multi-Part Flasher</h2>
   <p id="chip-info">Not connected</p>
+  <button id="connect">🔌 Connect</button>
 
-  <br/><br/>
+  <h3>Select .bin files</h3>
+  <label>Bootloader: <input type="file" id="bootloader" accept=".bin"></label><br>
+  <label>Partition Table: <input type="file" id="partition" accept=".bin"></label><br>
+  <label>Application: <input type="file" id="app" accept=".bin"></label><br><br>
 
-  <input type="file" id="firmware" accept=".bin" />
-  <br/><br/>
-  <button id="flash">⚡ Flash Firmware</button>
-  </div>
+  <button id="flash">⚡ Flash All</button>
+  <p id="status"></p>
 
-  <script type="module" src="flasher.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
